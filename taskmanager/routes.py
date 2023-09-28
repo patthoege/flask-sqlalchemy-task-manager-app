@@ -13,6 +13,7 @@ def categories():
     categories = list(Category.query.order_by(Category.category_name).all())
     return render_template("categories.html", categories=categories)
 
+
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if request.method == "POST":
